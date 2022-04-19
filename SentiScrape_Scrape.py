@@ -1,0 +1,20 @@
+#Importing the Social Reaper library#
+from socialreaper import Twitter
+from socialreaper.tools import to_csv
+
+#Defining the Web scraping portion of the application, this function will be called upon later
+def Web_Scraper():
+
+#Input of authentication tokens to connect to twitter API
+    auth_pass = Twitter(app_key=="IHkspCyB5ONmMctKqdAJQ0MBH",app_secret== "dLUB0wOCgA3oY2UuXaLQ67qUMOdvAMKbHD7k5ocxJakvHIqcVv",oauth_token== "1513408592468140032-BkjxjlC3wr58mOsZ8EFzS7ojmyKXDn", oauth_token_secret="TEaQinvzHtHLMAyAgBG7cKVLv1mZGkg6fCCjnCzsImAAL") 
+
+#Asks for user input in order to gauge a hashtag parameter
+    hashtag=input("What hashtag would you like to extract from?")         
+
+#This extracts the tweets and extracts it to a csv file
+    twt_para = auth_pass.search("#"+hashtag, count=500,  exclude_replies=True, include_retweets=False)
+    
+    to_csv(list(twt_para), filename= "hashtag.csv")
+
+#Function is called 
+Web_Scraper()
