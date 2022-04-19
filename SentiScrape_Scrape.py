@@ -6,7 +6,7 @@ from socialreaper.tools import to_csv
 def Web_Scraper():
 
 #Input of authentication tokens to connect to twitter API
-    auth_pass = Twitter(app_key=="IHkspCyB5ONmMctKqdAJQ0MBH",app_secret== "dLUB0wOCgA3oY2UuXaLQ67qUMOdvAMKbHD7k5ocxJakvHIqcVv",oauth_token== "1513408592468140032-BkjxjlC3wr58mOsZ8EFzS7ojmyKXDn", oauth_token_secret="TEaQinvzHtHLMAyAgBG7cKVLv1mZGkg6fCCjnCzsImAAL") 
+    auth_pass = Twitter(app_key=="",app_secret== "",oauth_token== "", oauth_token_secret="") 
 
 #Asks for user input in order to gauge a hashtag parameter
     hashtag=input("What hashtag would you like to extract from?")         
